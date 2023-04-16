@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVIE APP- DEBOUNCING</title>
+    <style>
+        *{
+            text-align: center;
+        }
+        input {
+            width: 200px;
+        }
+
+        #movies {
+            height: 200px;
+            width: 206px;
+            margin: auto;
+            border: 1px solid black;
+            overflow-y: scroll;
+            display: none;
+        }
+        #movie-details {
+            margin-top: 50px;
+        }
+        #movieCard{
+            /* border: 2px solid red;   */
+            width: 350px;
+            margin: auto;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            border-radius: 0 40px 0 40px; 
+            padding-bottom: 20px;
+        }
+        #movieCard > img {
+            width: 100%;
+            border-radius: 0 40px 0 0;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="query" oninput="debounce(main, 1000)">
+    <div id="movies"></div>
+
+    <div id="movie-details"></div>
+
+    <script src="index.js"></script>
+</body>
+</html>
